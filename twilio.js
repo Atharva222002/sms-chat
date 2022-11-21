@@ -21,7 +21,7 @@ app.get('/send-sms', (req, res) => {
          from: process.env.FROM,
          to: '+919307387132'
        })
-      .then(message => console.log(message.sid));
+      .then((message) => {console.log(message.sid); res.send("Message sent!");});
   });
 
 app.get('/', (req, res) => {
