@@ -23,6 +23,10 @@ app.get('/send-sms', (req, res) => {
        })
       .then(message => console.log(message.sid));
   });
+
+app.get('/', (req, res) => {
+  res.send("Hello World");
+});  
 const port = process.env.PORT || 3080;
 app.listen(port, () => {
   console.log('Express server listening on port 3080');
